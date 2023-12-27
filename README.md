@@ -58,7 +58,7 @@ LOG_DEBUG("This is a debug message");
 
 ```bash
 # 示例测试命令
-xmake && xmake test_gtest
+xmake && xmake run test_gtest
 ```
 
 使用256线程，每线程 10000 条输出，压测结果如下
