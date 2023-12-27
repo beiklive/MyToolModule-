@@ -1,14 +1,14 @@
 # 项目名称
 
-这个项目提供了一个简单的C++日志记录库，用于方便地在应用程序中添加日志记录功能。
+这个项目提供了一个简单的多线程C++日志记录库，用于方便地在应用程序中添加日志记录功能。
 
 ## 目录
 
 - [项目结构](#项目结构)
-- [要求](#要求)
+- [说明](#说明)
+- [使用](#使用)
 - [构建和运行](#构建和运行)
 - [测试](#测试)
-- [许可证](#许可证)
 
 ## 项目结构
 
@@ -59,4 +59,16 @@ LOG_DEBUG("This is a debug message");
 ```bash
 # 示例测试命令
 xmake && xmake test_gtest
+```
+
+使用256线程，每线程 10000 条输出，压测结果如下
+```
+[       OK ] LoggerStressTest.StressTestAllLevels (214234 ms)
+File size: 178877582 bytes
+File deleted: logfile.txt
+[----------] 1 test from LoggerStressTest (214234 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (214244 ms total)
+[  PASSED  ] 1 test.
 ```
