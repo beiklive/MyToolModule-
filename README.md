@@ -4,11 +4,13 @@
 
 ## 目录
 
-- [项目结构](#项目结构)
-- [说明](#说明)
-- [使用](#使用)
-- [构建和运行](#构建和运行)
-- [测试](#测试)
+- [项目名称](#项目名称)
+  - [目录](#目录)
+  - [项目结构](#项目结构)
+  - [说明](#说明)
+  - [使用](#使用)
+  - [构建和运行](#构建和运行)
+  - [测试](#测试)
 
 ## 项目结构
 
@@ -62,13 +64,35 @@ xmake && xmake run test_gtest
 ```
 
 使用256线程，每线程 10000 条输出，压测结果如下
+
+
+关闭控制台打印
 ```
-[       OK ] LoggerStressTest.StressTestAllLevels (214234 ms)
-File size: 178877582 bytes
-File deleted: logfile.txt
-[----------] 1 test from LoggerStressTest (214234 ms total)
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LoggerStressTest
+[ RUN      ] LoggerStressTest.StressTestAllLevels
+[       OK ] LoggerStressTest.StressTestAllLevels (12377 ms)
+File size: 169 MB
+File deleted: Logfile.txt
+[----------] 1 test from LoggerStressTest (12377 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (214244 ms total)
+[==========] 1 test from 1 test suite ran. (12401 ms total)
+[  PASSED  ] 1 test.
+```
+开启控制台打印
+```
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LoggerStressTest
+[ RUN      ] LoggerStressTest.StressTestAllLevels
+[       OK ] LoggerStressTest.StressTestAllLevels (155878 ms)
+File size: 169 MB
+File deleted: Logfile.txt
+[----------] 1 test from LoggerStressTest (155878 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (155897 ms total)
 [  PASSED  ] 1 test.
 ```

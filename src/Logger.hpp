@@ -88,6 +88,8 @@ namespace Logger {
         std::ofstream logFile;
         std::mutex logMutex;
         bool logFileEnabled = true;
+        bool logConsoleOutputEnable = true;
+        std::string defaultlogFileName{"Logfile.txt"};
     }
 
     void initializeLogger(bool enableLogFile = true) {
@@ -95,10 +97,15 @@ namespace Logger {
 
         if (logFileEnabled) {
             std::lock_guard<std::mutex> lock(logMutex);
-            logFile.open("logfile.txt", std::ios::app);
+            logFile.open(defaultlogFileName, std::ios::app);
         }
     }
 
+    void ConsoleOutputCtrl(bool enable = true)
+    {
+        logConsoleOutputEnable = enable;
+    }
+    
     void shutdownLogger() {
         std::lock_guard<std::mutex> lock(logMutex);
         if (logFile.is_open()) {
@@ -175,9 +182,11 @@ namespace Logger {
             vsnprintf(buffer, sizeof(buffer), format, args);
 
             va_end(args);
-
-            // 输出到控制台
-            std::cout << "[" << getTimestamp() << "] [" << getLogLevelString(level) << "] " << buffer << std::endl;
+            if(logConsoleOutputEnable)
+            {
+                // 输出到控制台
+                std::cout << "[" << getTimestamp() << "] [" << getLogLevelString(level) << "] " << buffer << std::endl;
+            }
 
             // 输出到文件
             if (logFileEnabled && logFile.is_open()) {

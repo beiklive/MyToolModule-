@@ -32,18 +32,19 @@ protected:
     static void SetUpTestSuite() {
         Logger::initializeLogger(true);
         Logger::setLogLevel(Logger::LogLevel::DEBUG);
+        Logger::ConsoleOutputCtrl(true);
     }
 
     // Per-test-suite tear-down
     static void TearDownTestSuite() {
         Logger::shutdownLogger();
-            const std::string filename = "logfile.txt";
+            const std::string filename = "Logfile.txt";
 
             // 获取文件大小
             std::streamsize size = getFileSize(filename);
 
             // 输出文件大小
-            std::cout << "File size: " << size << " bytes" << std::endl;
+            std::cout << "File size: " << size / 1024 /1024<< " MB" << std::endl;
 
             // 删除文件
             if (deleteFile(filename)) {
