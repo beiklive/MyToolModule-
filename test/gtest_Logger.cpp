@@ -1,7 +1,7 @@
 // test/test_gtest_stress.cpp
 
 #include <gtest/gtest.h>
-#include "../src/Logger.hpp"
+#include "../inc/Logger.hpp"
 #include <thread>
 #include <random>
 #include <iostream>

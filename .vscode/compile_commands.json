@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/mnt/c/DongJIe/WSLSpace/MyCode/MyToolModule-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-isystem", "/home/byeaxj/.xmake/packages/g/gtest/v1.14.0/1396d24d20ce4a17a0d869a0dd56d9ba/include", "-DNDEBUG", "-o", "build/.objs/gtest_json/linux/x86_64/release/test/gtest_json.cpp.o", "test/gtest_json.cpp"],
+  "file": "test/gtest_json.cpp"
+},
+{
+  "directory": "/mnt/c/DongJIe/WSLSpace/MyCode/MyToolModule-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-DNDEBUG", "-o", "build/.objs/translator_main/linux/x86_64/release/example/translator_main.cpp.o", "example/translator_main.cpp"],
+  "file": "example/translator_main.cpp"
+},
+{
+  "directory": "/mnt/c/DongJIe/WSLSpace/MyCode/MyToolModule-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-DNDEBUG", "-o", "build/.objs/log_main/linux/x86_64/release/example/log_main.cpp.o", "example/log_main.cpp"],
+  "file": "example/log_main.cpp"
+},
+{
+  "directory": "/mnt/c/DongJIe/WSLSpace/MyCode/MyToolModule-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-Iinc", "-DNDEBUG", "-o", "build/.objs/main/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+},
+{
+  "directory": "/mnt/c/DongJIe/WSLSpace/MyCode/MyToolModule-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-DNDEBUG", "-o", "build/.objs/json_main/linux/x86_64/release/example/json_main.cpp.o", "example/json_main.cpp"],
+  "file": "example/json_main.cpp"
+}]
